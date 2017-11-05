@@ -21,7 +21,7 @@ import org.springframework.transaction.support.ResourceHolderSupport;
 
 /**
  * Holder object for Jcr Session.
- * @author Guillaume Bort <guillaume.bort@zenexity.fr>
+ * @author <a href="mailto:guillaume.bort@zenexity.fr">Guillaume Bort</a>
  * @author Costin Leau
  * @author Sergio Bossa
  * @author Salvatore Incandela

@@ -27,8 +27,9 @@ import javax.transaction.xa.Xid;
 
 /**
  * JackRabbit User transaction (based on the XA Resource returned by JackRabbit).
- * <p/>
+ * <p>
  * Inspired from JackRabbit test suite. Internal {@link javax.transaction.UserTransaction} implementation.
+ * </p>
  */
 public class JackRabbitUserTransaction implements UserTransaction {
 

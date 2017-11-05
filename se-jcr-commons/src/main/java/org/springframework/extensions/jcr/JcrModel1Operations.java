@@ -82,7 +82,7 @@ public interface JcrModel1Operations {
     public Node getNodeByIdentifier(String id);
 
     /**
-     * @see javax.jcr.Session#getRootNode();
+     * @see javax.jcr.Session#getRootNode()
      */
     public Node getRootNode();
 
@@ -143,9 +143,10 @@ public interface JcrModel1Operations {
     /**
      * Utility method for executing a list of queries against the repository. Reads the queries given and
      * returns the results in a map.
-     * <p/>
+     * <p>
      * If possible the map will be a LinkedHashSet on JDK 1.4+, otherwise LinkedHashSet from Commons
      * collections 3.1 if the package is found. If the above fails a HashMap will be returned.
+     * </p>
      * @see org.springframework.core.CollectionFactory
      * @param list list of queries
      * @param language language of the queries. If null XPATH is assumed.

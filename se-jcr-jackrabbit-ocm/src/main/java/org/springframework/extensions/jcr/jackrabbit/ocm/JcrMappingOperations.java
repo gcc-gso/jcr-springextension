@@ -21,12 +21,14 @@ import org.apache.jackrabbit.ocm.query.Query;
 import org.springframework.dao.DataAccessException;
 
 /**
+ * <p>
  * Interface that specifies a basic set of JCR mapping operations. Not often used, but a useful option to
  * enhance testability, as it can easily be mocked or stubbed.
- * <p/>
- * <p/>
+ * </p>
+ * <p>
  * Provides JcrMappingTemplate's data access methods that mirror various PersistenceManager methods. See the
  * required javadocs for details on those methods.
+ * </p>
  * @author Costin Leau
  */
 public interface JcrMappingOperations {

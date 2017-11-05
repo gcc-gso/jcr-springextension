@@ -20,7 +20,7 @@ import javax.jcr.Session;
 
 /**
  * Session Factory interface. This interface describes a simplified contract for retrieving a session and acts
- * as a central point inside Spring Extensions JCR support. </p>
+ * as a central point inside Spring Extensions JCR support.
  * @author Costin Leau
  * @author Sergio Bossa
  * @author Salvatore Incandela

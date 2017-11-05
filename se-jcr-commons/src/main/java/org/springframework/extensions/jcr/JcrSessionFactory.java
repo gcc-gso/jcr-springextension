@@ -40,32 +40,32 @@ import org.springframework.util.Assert;
  * repository which facilitates session retrieval through a central point. No
  * exception conversion from Jcr Repository exceptions to Spring DAO exceptions
  * is done.
- * 
- * <p/>
+ * <p>
  * The session factory is able to add event listener definitions for each
- * session and some utility methods.<br/>
+ * session and some utility methods.
+ * </p>
  * Note that for added functionality (like JackRabbit SessionListener) you can
  * use the decorators package (available from JackRabbit).
  * 
- * <p/>
+ * <p>
  * This factory beans allows registration for namespaces. By default, newly
  * registered namespaces will <strong>not</strong> be unregistered once the
  * FactoryBean is destroyed and existing namespaces registered under the same
  * suffix will <strong>not</strong> be overwritten since most JCR
  * implementations do not support these features.
- * 
+ * </p>
  * One can change this behavior using the
  * {@link #setForceNamespacesRegistration(boolean)},
- * {@link #setKeepNewNamespaces(boolean) and
+ * {@link #setKeepNewNamespaces(boolean)} and
  * 
- * @link #skipRegisteredNamespace(boolean)} methods.
+ * {@link #setSkipExistingNamespaces(boolean)} methods.
  * 
  *       If 'forceNamespacesRegistration' is true and 'keepNewNamespaces' false,
  *       the overwritten namespaces are registered back when the factory is
  *       destroyed.
  * 
  * @author Costin Leau
- * @author Brian Moseley <bcm@osafoundation.org>
+ * @author <a href="mailto:bcm@osafoundation.org">Brian Moseley</a>
  * @author Sergio Bossa
  * @author Salvatore Incandela
  * 
@@ -474,9 +474,10 @@ public class JcrSessionFactory implements InitializingBean, DisposableBean, Sess
      * Indicate if the given namespace registrations will override the namespace already registered in the
      * repository under the same prefix. This will cause unregistration for the namespaces that will be
      * modified.
-     * <p/>
+     * <p>
      * However, depending on the {@link #setKeepNewNamespaces(boolean)} setting, the old namespaces can be
      * registered back once the application context is destroyed. False by default.
+     * </p>
      * @param forceNamespacesRegistration The forceNamespacesRegistration to set.
      */
     public void setForceNamespacesRegistration(boolean forceNamespacesRegistration) {
@@ -488,10 +489,11 @@ public class JcrSessionFactory implements InitializingBean, DisposableBean, Sess
      * (default), the new namespace will not be registered and the old namespace kept in place. If not
      * skipped, registration of new namespaces will fail if there are already namespace registered under the
      * same prefix.
-     * <p/>
+     * <p>
      * This flag is required for JCR implementations which do not support namespace unregistration which
      * render the {@link #setForceNamespacesRegistration(boolean)} method useless (as namespace registration
      * cannot be forced).
+     * </p>
      * @param skipRegisteredNamespace The skipRegisteredNamespace to set.
      */
     public void setSkipExistingNamespaces(boolean skipRegisteredNamespace) {

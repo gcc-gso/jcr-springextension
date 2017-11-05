@@ -31,7 +31,7 @@ import org.springframework.extensions.jcr.SessionFactoryUtils;
  * 
  * 
  * @author Costin Leau
- * @author Guillaume Bort <guillaume.bort@zenexity.fr>
+ * @author Guillaume Bort guillaume.bort@zenexity.fr
  * @author Sergio Bossa
  * @author Salvatore Incandela
  * 

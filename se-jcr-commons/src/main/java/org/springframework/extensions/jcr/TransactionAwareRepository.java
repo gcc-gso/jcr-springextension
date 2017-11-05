@@ -33,28 +33,31 @@ import org.springframework.util.ObjectUtils;
  * This FactoryBean exposes a proxy for a target JCR Repository, returning the current thread-bound Repository
  * (the Spring-managed transactional Repository or the single OpenPersistenceManagerInView Repository) on
  * <code>login()</code>, if any.
- * <p/>
+ * <p>
  * Essentially, <code>login()</code> calls get seamlessly forwarded to
  * <code>SessionFactoryUtils.getSession</code>. Furthermore, <code>Session.logout</code> calls get forwarded
  * to <code>SessionFactoryUtils.releaseSession</code>.
- * <p/>
+ * </p>
+ * <p>
  * As the Session returned depends on the workspace and credentials given, this implementation accepts a
  * JcrSessionFactory as parameter (basically a wrapper for Repository, Credentials and Workspace properties).
  * The proxy will check the parameters and proxy the Repository for sessions that are retrieved with the
  * credentials and workspace name defined on the session factory. Sessions retrieved with different workspace,
  * credentials are not proxied.
- * <p/>
+ * </p>
+ * <p>
  * The main advantage of this proxy is that it allows DAOs to work with a plain JCR Repository reference,
  * while still participating in Spring's (or a J2EE server's) resource and transaction management. DAOs will
  * only rely on the JCR API in such a scenario, without any Spring dependencies. DAOs could seamlessly switch
  * between a JNDI Repository and this proxy for a local Repository receiving the reference through Dependency
  * Injection. This will work without any Spring API dependencies in the DAO code!
- * <p/>
+ * </p>
+ * <p>
  * It is usually preferable to write your JCR-based DAOs with Spring Extensions's JcrTemplate, offering
  * benefits such as consistent data access exceptions instead of RepositoryExceptions at the DAO layer.
  * However, Spring's resource and transaction management (and Dependency Injection) will work for DAOs written
  * against the plain JCR API too.
- * <p/>
+ * </p>
  * Of course, you can still access the target Repository even when your DAOs go through this proxy, by
  * defining a bean reference that points directly at your target Repository bean.
  * @author Costin Leau
@@ -123,6 +126,7 @@ public class TransactionAwareRepository implements InitializingBean, FactoryBean
      * Default is "true". Can be turned off to enforce access to transactional Sessionss, which safely allows
      * for DAOs written to get a Session without explicit closing (i.e. a <code>Session.login()</code> call
      * without corresponding <code>Session.logout()</code> call).
+     * </p>
      * @see SessionFactoryUtils#getSession(SessionFactory, boolean)
      * @param allowCreate The allowCreate to set.
      */
@@ -145,6 +149,7 @@ public class TransactionAwareRepository implements InitializingBean, FactoryBean
      * Default is "true". Can be turned off to enforce only transactional Sessions, which safely allows for
      * DAOs written to get a Session without explicit closing (i.e. a <code>Session.login()</code> call
      * without corresponding <code>Session.logout()</code> call).
+     * </p>
      * @param allowNonTxRepository The allowNonTxRepository to set.
      */
     public void setAllowNonTxRepository(boolean allowNonTxRepository) {

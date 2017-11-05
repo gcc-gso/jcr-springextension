@@ -26,13 +26,11 @@ import javax.jcr.Session;
  * The class is namespace aware (that's why it's not static) and will return the correct name if the namespace
  * prefixes are changed (from 'jcr' to 'foo' for example). If the cache is enabled, it will be populated in
  * lazy manner (once a certain property is looked up).
- * <p/>
  * The class can work in two modes:
  * <ol>
  * <li>Caching the names by default (default).</li>
  * <li>Detecting prefixes and computing the name on each call.</li>
  * </ol>
- * <p/>
  * <strong>Note</strong> This class was inspired by JackRabbit's JcrConstants.
  * @author Costin Leau
  * @author Sergio Bossa

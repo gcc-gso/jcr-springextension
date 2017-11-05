@@ -43,17 +43,18 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
  * This local strategy is an alternative to executing JCR operations within JTA transactions. Its advantage is
  * that it is able to work in any environment, for example a standalone application or a test suite. It is
  * <i>not</i> able to provide XA transactions, for example to share transactions with data access.
+ * </p>
  * <p>
  * JcrTemplate will auto-detect such thread-bound connection/session pairs and automatically participate in
  * them. There is currently no support for letting plain JCR code participate in such transactions.
- * <p>
+ * </p>
  * This transaction strategy will typically be used in combination with a single JCR Repository for all JCR
  * access to save resources, typically in a standalone application.
  * @see org.apache.jackrabbit.api.XASession
  * @see javax.jcr.RepositoryException
  * @see org.springframework.transaction.support.AbstractPlatformTransactionManager
  * @author Costin Leau
- * @author Guillaume Bort <guillaume.bort@zenexity.fr>
+ * @author <a href="mailto:guillaume.bort@zenexity.fr">Guillaume Bort</a>
  * @author Sergio Bossa
  * @author Salvatore Incandela
  */

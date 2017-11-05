@@ -157,7 +157,7 @@ public abstract class SessionFactoryUtils {
     /**
      * Jcr exception translator - it converts specific JSR-170 checked exceptions into unchecked Spring DA
      * exception.
-     * @author Guillaume Bort <guillaume.bort@zenexity.fr>
+     * @author <a href="mailto:guillaume.bort@zenexity.fr">Guillaume Bort</a>
      * @author Costin Leau
      * @author Sergio Bossa
      * @author Salvatore Incandela

@@ -23,8 +23,8 @@ import javax.jcr.Repository;
 import org.apache.xerces.util.XMLChar;
 
 /**
- * Utility class for Java Content Repository. The hex escaping/unescaping is based on Brian Moseley
- * <bcm@osafoundation.org> work.
+ * Utility class for Java Content Repository. The hex escaping/unescaping is based on 
+ * <a href="mailto:bcm@osafoundation.org">Brian Moseley</a> work.
  * @author Costin Leau
  * @author Sergio Bossa
  * @author Salvatore Incandela
@@ -35,12 +35,14 @@ public abstract class JcrUtils {
      * Class used for escaping XML names which contain restricted character as defined in the JCR spec version
      * 1.0 Section 6.2.5.2. (i.e. "/", ":", "[", "]", "*", "'",
      * """, "|", and all whitespace characters other than " "). The escaping schema used is described in the
-     * same document in paragraphs 6.4.3 and 6.4.4. The class was initially imported from the <a href="http://svn.apache.org/viewcvs.cgi/incubator/jackrabbit/trunk/jackrabbit/src/main/java/org/apache/jackrabbit/util/ISO9075.java?view=markup"
+     * same document in paragraphs 6.4.3 and 6.4.4. The class was initially imported from the 
+     * <a href="http://svn.apache.org/viewcvs.cgi/incubator/jackrabbit/trunk/jackrabbit/src/main/java/org/apache/jackrabbit/util/ISO9075.java?view=markup"
      * >Jackrabbit project</a>. Implements the encode and decode routines as specified for XML name to SQL
-     * identifier conversion in ISO 9075-14:2003.<br/>
+     * identifier conversion in ISO 9075-14:2003.
+     * <p>
      * If a character <code>c</code> is not valid at a certain position in an XML 1.0 NCName it is encoded in
      * the form: '_x' + hexValueOf(c) + '_'
-     * <p/>
+     * </p>
      */
     protected static class ISO9075 {
 

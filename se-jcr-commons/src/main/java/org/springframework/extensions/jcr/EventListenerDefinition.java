@@ -86,7 +86,7 @@ public class EventListenerDefinition implements InitializingBean {
     }
 
     /**
-     * @param isDeep The isDeep to set.
+     * @param deep The deep to set.
      */
     public void setDeep(boolean deep) {
         this.deep = deep;

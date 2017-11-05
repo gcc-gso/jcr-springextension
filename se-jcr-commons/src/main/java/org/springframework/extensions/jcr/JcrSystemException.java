@@ -20,7 +20,7 @@ import org.springframework.dao.UncategorizedDataAccessException;
 /**
  * Runtime (unchecked) exception used for wrapping the JSR-170 specific checked exceptions.
  * @see javax.jcr.RepositoryException
- * @author Guillaume Bort <guillaume.bort@zenexity.fr>
+ * @author <a href="mailto:guillaume.bort@zenexity.fr">Guillaume Bort</a>
  * @author Costin Leau
  * @author Sergio Bossa
  * @author Salvatore Incandela

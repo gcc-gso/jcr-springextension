@@ -25,7 +25,7 @@ import javax.jcr.Session;
  * classes within a method implementation. The typical implementation will call Session.get/move/query to
  * perform some operations on the repository.
  * @author Costin Leau
- * @author Brian Moseley <bcm@osafoundation.org>
+ * @author <a href="mailto:bcm@osafoundation.org">Brian Moseley</a>
  * @author Sergio Bossa
  * @author Salvatore Incandela
  */

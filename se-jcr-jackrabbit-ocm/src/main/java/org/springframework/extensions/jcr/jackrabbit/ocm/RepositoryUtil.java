@@ -170,7 +170,7 @@ public class RepositoryUtil {
      * Encode a path
      * @param path the path to encode
      * @return the encoded path
-     * @TODO : drop Jackrabbit dependency
+     * TODO : drop Jackrabbit dependency
      */
     public static String encodePath(String path) {
         String[] pathElements = Text.explode(path, '/');

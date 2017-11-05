@@ -52,8 +52,8 @@ import org.springframework.extensions.jcr.SessionFactory;
 
 /**
  * Template which adds mapping support for the Java Content Repository.
- * <p/>
- * For PersistenceManagers the template creates internally the set of default converters.
+ * <p>
+ * For PersistenceManagers the template creates internally the set of default converters.</p>
  * @author Costin Leau
  * @see org.apache.jackrabbit.ocm.manager.ObjectContentManager
  */
@@ -223,10 +223,10 @@ public class JcrMappingTemplate extends JcrTemplate implements JcrMappingOperati
     /**
      * Convert the given MappingException to an appropriate exception from the
      * <code>org.springframework.dao</code> hierarchy.
-     * <p/>
+     * <p>
      * Note that because we have no base specific exception we have to catch the generic Exception and
      * translate it into JcrSystemException.
-     * <p/>
+     * </p>
      * May be overridden in subclasses.
      * @param ex Exception that occured
      * @return the corresponding DataAccessException instance
