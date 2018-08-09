@@ -29,6 +29,10 @@ configure(allprojects) {
 	}
 }
 
+subprojects {
+    tasks.withType(Javadoc).all { enabled = false }
+}
+
 configure(subprojects) { subproject ->
 
 	apply from:   "${rootProject.projectDir}/publish-maven.gradle"
